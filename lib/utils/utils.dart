@@ -1047,7 +1047,7 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
   Orientation _getOrientation(BuildContext context) {
     var result = MediaQuery.maybeOf(context)?.orientation;
     if (result == null) {
-      final Size size = window.physicalSize;
+      final Size size = MediaQuery.sizeOf(context);
       result = size.width > size.height
           ? Orientation.landscape
           : Orientation.portrait;
